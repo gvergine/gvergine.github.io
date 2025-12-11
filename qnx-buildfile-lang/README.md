@@ -21,17 +21,20 @@ This project was built to make QNX development smoother, more reliable, and more
 
 ##  Key Features
 
-- **QNX buildfile grammar** implemented using Xtext  
+- **QNX buildfile grammar** implemented using Xtext
 
 - **Eclipse Plugin**
   - Syntax highlighting  
   - Real-time syntax validation  
-  - Better readability and safer editing  
+  - Better readability and safer editing 
+   
 - **Standalone Maven Library**
   - Enables parstng of buildfiles programmatically  
   - Integrate into custom tooling  
-  - Add validation to CI/CD pipelines  
-- **Distributed via [Maven Central](https://mvnrepository.com/artifact/io.github.gvergine/qnx.buildfile.lang/1.0.3)**  
+  - Add validation to CI/CD pipelines
+
+- **Distributed via [Maven Central](https://mvnrepository.com/artifact/io.github.gvergine/qnx.buildfile.lang/1.0.3)**
+
 - **Lightweight, dependency-friendly, and easy to integrate**
 
 ---
