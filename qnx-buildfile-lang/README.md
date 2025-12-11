@@ -1,39 +1,99 @@
 # qnx-buildfile-lang
+*An [Xtext](https://eclipse.dev/Xtext/documentation/)-based grammar for parsing and validating [QNX buildfiles](https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.building/topic/buildfiles/buildfile_syntax.html)*
 
-This is an [Xtext](https://eclipse.dev/Xtext/documentation/)-based grammar for parsing [QNX buildfiles](https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.building/topic/buildfiles/buildfile_syntax.html).
+---
+*The rest of this README is for developers who want to use the grammar in their daily work. If you are a developer that wants to contribute to the grammar, please go to [https://github.com/gvergine/qnx-buildfile-lang](https://github.com/gvergine/qnx-buildfile-lang)*
 
 
-The rest of this README is for developers who want to use the grammar in their daily work. If you ware a developer that wants to contribute to the grammar, please go to [https://github.com/gvergine/qnx-buildfile-lang](https://github.com/gvergine/qnx-buildfile-lang)
+## Overview
 
-## What is it
+Working with QNX buildfiles can be error-prone and time-consuming. Syntax or semantic issues often show up late in the build process, slowing developers down and making debugging harder. It is often a struggle to enforce systematically additional (e.g. security) policies as an automatic quality gate.
 
-Xtext project provides a java-based environment that allows to create grammars and tooling around it, This project is about a specific grammar for parsing QNX Buildfiles. 
+**qnx-buildfile-lang** solves this by providing:
 
-## How can I use it
+- **A complete Xtext grammar** for QNX buildfiles  
+- **Instant syntax validation** inside Eclipse  
+- **A standalone Maven library** that enables programmatic parsing, additinal opportunities for semantic validation, automation, and CI checks. 
 
-You can download the eclipse repository for this plugin as a zip and install it as archive in Eclipse.
+This project was built to make QNX development smoother, more reliable, and more automatable for teams working on embedded or automotive platforms.
 
-Or, you can write your own java application that uses the qnx buildfile grammar.
+---
 
-### Eclipse plugin
+##  Key Features
 
-Download the eclipse repository from [https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.3/qnx.buildfile.lang.repository-1.0.3.zip](https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.3/qnx.buildfile.lang.repository-1.0.3.zip) and install it in your Eclipse.
+- **QNX buildfile grammar** implemented using Xtext  
 
-It will recognize error in your buildfile
+- **Eclipse Plugin**
+  - Syntax highlighting  
+  - Real-time syntax validation  
+  - Better readability and safer editing  
+- **Standalone Maven Library**
+  - Enables parstng of buildfiles programmatically  
+  - Integrate into custom tooling  
+  - Add validation to CI/CD pipelines  
+- **Distributed via [Maven Central](https://mvnrepository.com/artifact/io.github.gvergine/qnx.buildfile.lang/1.0.3)**  
+- **Lightweight, dependency-friendly, and easy to integrate**
+
+---
+
+## Install & Use
+
+### **As Eclipse Plugin**
+
+1. Download the plugin ZIP from [Maven Central](https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.3/qnx.buildfile.lang.repository-1.0.3.zip).  
+2. In Eclipse:  
+   *Help → Install New Software → Add → Archive…*  
+3. Select the ZIP file and proceed with installation 
+4. Restart Eclipse and open any QNX `.build` file to enjoy syntax checking and highlighting.
+
+*Remeber to allow the Xtext Nature to your Eclpse project*
 
 ![screenshot](images/qnx-buildfile-eclipse-plugin.png)
 
-Unfortunately, it doesn't run on Momentix as of now.
+*Support for Momentics IDE is work in progress*
 
+---
 
-### Maven
+### **As a Maven Dependency**
 
-```
+```xml
 <dependency>
-    <groupId>io.github.gvergine</groupId>
-    <artifactId>qnx.buildfile.lang</artifactId>
-    <version>1.0.3</version>
+  <groupId>io.github.gvergine</groupId>
+  <artifactId>qnx.buildfile.lang</artifactId>
+  <version>1.0.3</version>
 </dependency>
 ```
+Or any latest release, check it at [Sonatype](https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang).
 
-Or any latest release, check it at [https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang](https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang)
+
+---
+
+## Use Cases
+- Developers working with custom QNX buildflows
+
+- CI pipelines that validate buildfiles before builds
+
+- Static analysis or tooling around QNX images
+
+- Teams onboarding new developers onto QNX build systems
+
+- Automotive and embedded companies with QNX-based projects
+
+##  Roadmap
+
+- Improve grammar coverage and corner-case handling
+
+- Add CLI tool for validating buildfiles without Eclipse
+
+- Investigate Momentics compatibility
+
+- Add code completion and handling of environment varlanbles
+
+- Add real-world sample build projects
+
+
+If you want to contribute ideas or fixes — PRs and feature requests are very welcome!
+
+## Author
+
+Created and maintained by [Giovanni Vergine](https://www.linkedin.com/in/giovanni-vergine/)
