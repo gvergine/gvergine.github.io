@@ -46,7 +46,7 @@ This project was built to make QNX development smoother, more reliable, and more
 3. Select the ZIP file and proceed with installation 
 4. Restart Eclipse and open any QNX `.build` file to enjoy syntax checking and highlighting.
 
-*Remeber to allow the Xtext Nature to your Eclpse project*
+*Remember to allow the Xtext Nature to your Eclipse project*
 
 ![screenshot](images/qnx-buildfile-eclipse-plugin.png)
 
@@ -63,7 +63,7 @@ This project was built to make QNX development smoother, more reliable, and more
   <version>1.0.3</version>
 </dependency>
 ```
-Or any latest release, check it at [Sonatype](https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang).
+Or any latest release, check which one at [Sonatype](https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang).
 
 
 ---
@@ -96,4 +96,4 @@ If you want to contribute ideas or fixes — PRs and feature requests are very w
 
 ## Author
 
-Created and maintained by [Giovanni Vergine](https://www.linkedin.com/in/giovanni-vergine/)
+Created and maintained by Giovanni Vergine - contact me via Github Issues or at [my Linkedin](https://www.linkedin.com/in/giovanni-vergine/)
