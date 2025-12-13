@@ -43,7 +43,7 @@ This project was built to make QNX development smoother, more reliable, and more
 
 ### **As Eclipse Plugin**
 
-1. Download the plugin ZIP from [Maven Central](https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.3/qnx.buildfile.lang.repository-1.0.3.zip).  
+1. Download the plugin ZIP from [Maven Central](https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.4/qnx.buildfile.lang.repository-1.0.4.zip).  
 2. In Eclipse:  
    *Help → Install New Software → Add → Archive…*  
 3. Select the ZIP file and proceed with installation 
@@ -86,8 +86,19 @@ if (parseResult.hasErrors())
   // ...
 ```
 
-
 Full example of a standalone command line interface at [qnx.buildfile.lang.cli](https://github.com/gvergine/qnx-buildfile-lang/blob/master/qnx.buildfile.lang.parent/qnx.buildfile.lang.cli/src/main/java/qnx/buildfile/lang/cli/Main.java).
+
+Ready-to-use executable jar for command line validation is available as [qnx.buildfile.lang.cli-1.0.4-shaded.jar](https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.4/qnx.buildfile.lang.cli-1.0.4-shaded.jar) (java 17+ required):
+
+```
+$ java -jar qnx.buildfile.lang.cli-1.0.4-shaded.jar -i path/to/first.build -i path/to/second.build 
+This is the QNX Buildfile Validator version 1.0.4
+Processing path/to/first.build
+Processing path/to/second.build
+Done - 0 failures
+$ echo $?
+0
+```
 
 ---
 
