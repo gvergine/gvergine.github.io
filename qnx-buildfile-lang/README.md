@@ -33,7 +33,7 @@ This project was built to make QNX development smoother, more reliable, and more
   - Integrate into custom tooling  
   - Add validation to CI/CD pipelines
 
-- **Distributed via [Maven Central](https://mvnrepository.com/artifact/io.github.gvergine/qnx.buildfile.lang/1.0.3)**
+- **Distributed via [Maven Central](https://mvnrepository.com/artifact/io.github.gvergine/qnx.buildfile.lang/1.0.4)**
 
 - **Lightweight, dependency-friendly, and easy to integrate**
 
@@ -63,11 +63,31 @@ This project was built to make QNX development smoother, more reliable, and more
 <dependency>
   <groupId>io.github.gvergine</groupId>
   <artifactId>qnx.buildfile.lang</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 Or any latest release, check which one at [Sonatype](https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang).
 
+This is an example of a standalone parser:
+```java
+import qnx.buildfile.lang.BuildfileDSLStandaloneHelper;
+import org.eclipse.xtext.validation.Issue;
+
+// ...
+
+BuildfileDSLStandaloneHelper buildfileDSLStandaloneHelper = new BuildfileDSLStandaloneHelper();
+
+// ...
+
+File file = new File(filename);
+BuildfileDSLStandaloneHelper.ParsingResult parseResult = buildfileDSLStandaloneHelper.parse(file);        	
+
+if (parseResult.hasErrors())
+  // ...
+```
+
+
+Full example of a standalone command line interface at [qnx.buildfile.lang.cli](https://github.com/gvergine/qnx-buildfile-lang/blob/master/qnx.buildfile.lang.parent/qnx.buildfile.lang.cli/src/main/java/qnx/buildfile/lang/cli/Main.java).
 
 ---
 
