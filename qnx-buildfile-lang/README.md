@@ -117,8 +117,6 @@ $ echo $?
 
 - Improve grammar coverage and corner-case handling
 
-- Add CLI tool for validating buildfiles without Eclipse
-
 - Investigate Momentics compatibility
 
 - Add code completion and handling of environment varlanbles
