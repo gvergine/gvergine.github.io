@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>qnx-buildfile-lang 1.0.6</title>
+<title>qnx-buildfile-lang 1.0.7</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -550,7 +550,7 @@ pre.rouge .gs {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>qnx-buildfile-lang 1.0.6</h1>
+<h1>qnx-buildfile-lang 1.0.7</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -567,21 +567,27 @@ pre.rouge .gs {
 <li><a href="#_usage">2.2. Usage</a></li>
 </ul>
 </li>
-<li><a href="#_the_command_line_standalone_executable_jar">3. The command line standalone executable jar</a>
+<li><a href="#_the_visual_studio_code_extension">3. The Visual Studio Code extension</a>
 <ul class="sectlevel2">
 <li><a href="#_installation_2">3.1. Installation</a></li>
 <li><a href="#_usage_2">3.2. Usage</a></li>
 </ul>
 </li>
-<li><a href="#_getting_started_with_the_standalone_java_library">4. Getting Started with the standalone Java library</a>
+<li><a href="#_the_command_line_standalone_executable_jar">4. The command line standalone executable jar</a>
 <ul class="sectlevel2">
 <li><a href="#_installation_3">4.1. Installation</a></li>
-<li><a href="#_key_concepts_to_remember">4.2. Key concepts to remember</a></li>
-<li><a href="#_examples">4.3. Examples</a>
+<li><a href="#_usage_3">4.2. Usage</a></li>
+</ul>
+</li>
+<li><a href="#_getting_started_with_the_standalone_java_library">5. Getting Started with the standalone Java library</a>
+<ul class="sectlevel2">
+<li><a href="#_installation_4">5.1. Installation</a></li>
+<li><a href="#_key_concepts_to_remember">5.2. Key concepts to remember</a></li>
+<li><a href="#_examples">5.3. Examples</a>
 <ul class="sectlevel3">
-<li><a href="#_parsing_programmatically">4.3.1. Parsing programmatically:</a></li>
-<li><a href="#_writing_and_using_a_custom_validator">4.3.2. Writing and using a custom validator:</a></li>
-<li><a href="#_resolve_the_environment_variables">4.3.3. Resolve the environment variables:</a></li>
+<li><a href="#_parsing_programmatically">5.3.1. Parsing programmatically:</a></li>
+<li><a href="#_writing_and_using_a_custom_validator">5.3.2. Writing and using a custom validator:</a></li>
+<li><a href="#_resolve_the_environment_variables">5.3.3. Resolve the environment variables:</a></li>
 </ul>
 </li>
 </ul>
@@ -596,7 +602,7 @@ pre.rouge .gs {
 <p>Giovanni Vergine, <a href="mailto:verginegiovanni@gmail.com">verginegiovanni@gmail.com</a></p>
 </div>
 <div class="paragraph small">
-<p>Date: Sun Dec 28 18:12:45 EET 2025</p>
+<p>Date: Fri Jan  9 13:43:59 EET 2026</p>
 </div>
 <!-- toc disabled -->
 <div class="admonitionblock tip">
@@ -650,7 +656,7 @@ pre.rouge .gs {
 <div class="ulist">
 <ul>
 <li>
-<p>Available as an Eclipse Plugin</p>
+<p>Available as an Eclipse Plugin or Visual Studio Code extension</p>
 <div class="ulist">
 <ul>
 <li>
@@ -736,7 +742,7 @@ pre.rouge .gs {
 Look for <code>qnx.buildfile.lang.repository-{Version}.zip</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.repository">Maven Central</a></p>
 </div>
 <div class="paragraph">
-<p>E.g. latest version <code>1.0.6</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.6/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.6/</a></p>
+<p>E.g. latest version <code>1.0.7</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.7/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.7/</a></p>
 </div>
 <div class="paragraph">
 <p>Once downloded, follow the usual steps to install it in Eclipse:</p>
@@ -799,7 +805,49 @@ Look for <code>qnx.buildfile.lang.repository-{Version}.zip</code> in <a href="ht
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_command_line_standalone_executable_jar">3. The command line standalone executable jar</h2>
+<h2 id="_the_visual_studio_code_extension">3. The Visual Studio Code extension</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Xtext supports the Language Server protocol out of the box, that works very well with Visual Studio Code.</p>
+</div>
+<div class="sect2">
+<h3 id="_installation_2">3.1. Installation</h3>
+<div class="paragraph">
+<p>Download the extension as a <code>.vsix</code> from Maven Central.
+Look for <code>qnx.buildfile.lang.lsp-{version}.vsix</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.lsp">Maven Central</a></p>
+</div>
+<div class="paragraph">
+<p>E.g. latest version <code>1.0.7</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.0.7/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.0.7/</a></p>
+</div>
+<div class="paragraph">
+<p>Once downloded, follow these steps for installing in vscode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell"><span class="o">(</span>optional<span class="o">)</span> <span class="nv">$ </span>code <span class="nt">--uninstall-extension</span> gvergine.qnx-buildfile-lang
+<span class="nv">$ </span>code <span class="nt">--install-extension</span> path/to/qnx.buildfile.lang.lsp-<span class="o">{</span>version<span class="o">}</span>.vsix</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, restart vscode.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage_2">3.2. Usage</h3>
+<div class="paragraph">
+<p>Syntax checking and highlighting should be available as in the following picture:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/qnx-buildfile-vscode-plugin.png" alt="qnx buildfile vscode plugin">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_command_line_standalone_executable_jar">4. The command line standalone executable jar</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A ready-to-use executable jar for command line validation is available as well. This is mostly useful for integration in a script or in a CI/CD pipeline.</p>
@@ -808,17 +856,17 @@ Look for <code>qnx.buildfile.lang.repository-{Version}.zip</code> in <a href="ht
 <p>It supports the same validation rules of the Eclipse Plugin, but they are printed on the standard error, and the exit code will be 0 only if no errors are found.</p>
 </div>
 <div class="sect2">
-<h3 id="_installation_2">3.1. Installation</h3>
+<h3 id="_installation_3">4.1. Installation</h3>
 <div class="paragraph">
 <p>Download the command line standalone executable jar from Maven Central.
 Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.cli">Maven Central</a></p>
 </div>
 <div class="paragraph">
-<p>E.g. latest version <code>1.0.6</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.6/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.6/</a></p>
+<p>E.g. latest version <code>1.0.7</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.7/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.7/</a></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_2">3.2. Usage</h3>
+<h3 id="_usage_3">4.2. Usage</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -839,7 +887,7 @@ Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="ht
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell">java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.6-shaded.jar <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...] <span class="o">[</span><span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]]...
+<pre class="rouge highlight"><code data-lang="shell">java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.7-shaded.jar <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...] <span class="o">[</span><span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]]...
   <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]
          buildfile<span class="o">(</span>s<span class="o">)</span></code></pre>
 </div>
@@ -849,8 +897,8 @@ Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="ht
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.6-shaded.jar <span class="nt">-i</span> path/to/first.build <span class="nt">-i</span> path/to/second.build
-QNX Buildfile Validator version 1.0.6
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.7-shaded.jar <span class="nt">-i</span> path/to/first.build <span class="nt">-i</span> path/to/second.build
+QNX Buildfile Validator version 1.0.7
 Processing path/to/first.build
 Processing path/to/second.build
 Done - 0 failures
@@ -863,8 +911,8 @@ Done - 0 failures
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.6-shaded.jar <span class="nt">-i</span> path/to/error.build
-QNX Buildfile Validator version 1.0.6
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.7-shaded.jar <span class="nt">-i</span> path/to/error.build
+QNX Buildfile Validator version 1.0.7
 Processing path/to/error.build
 ERROR at path/to/error.build:11: Attribute name <span class="s2">"gidh"</span> is not known
 Done - 1 failure
@@ -877,7 +925,7 @@ Done - 1 failure
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_started_with_the_standalone_java_library">4. Getting Started with the standalone Java library</h2>
+<h2 id="_getting_started_with_the_standalone_java_library">5. Getting Started with the standalone Java library</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The standalone Java library allows you to build your own java-based tooling. Typical use cases are:
@@ -886,7 +934,7 @@ Done - 1 failure
 - generation (e.g. xml or csv representation of the buildfile for further processing with non-java tools)</p>
 </div>
 <div class="sect2">
-<h3 id="_installation_3">4.1. Installation</h3>
+<h3 id="_installation_4">5.1. Installation</h3>
 <div class="paragraph">
 <p>You can get the latest version via Maven Central:</p>
 </div>
@@ -895,13 +943,13 @@ Done - 1 failure
 <pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>io.github.gvergine<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>qnx.buildfile.lang<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;version&gt;</span>1.0.6<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0.7<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_key_concepts_to_remember">4.2. Key concepts to remember</h3>
+<h3 id="_key_concepts_to_remember">5.2. Key concepts to remember</h3>
 <div class="paragraph">
 <p>When using a parser library, it is important first to understand the Abstract Syntax Tree that the parser will produce in memory.
 When the AST is known, will be easy to access any part of the model and to validate it or generate output accordingly.</p>
@@ -929,9 +977,9 @@ When the AST is known, will be easy to access any part of the model and to valid
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples">4.3. Examples</h3>
+<h3 id="_examples">5.3. Examples</h3>
 <div class="sect3">
-<h4 id="_parsing_programmatically">4.3.1. Parsing programmatically:</h4>
+<h4 id="_parsing_programmatically">5.3.1. Parsing programmatically:</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">qnx.buildfile.lang.utils.Parser</span><span class="o">;</span>
@@ -949,7 +997,7 @@ When the AST is known, will be easy to access any part of the model and to valid
 </div>
 </div>
 <div class="sect3">
-<h4 id="_writing_and_using_a_custom_validator">4.3.2. Writing and using a custom validator:</h4>
+<h4 id="_writing_and_using_a_custom_validator">5.3.2. Writing and using a custom validator:</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">org.eclipse.xtext.validation.Check</span><span class="o">;</span>
@@ -1053,7 +1101,7 @@ When the AST is known, will be easy to access any part of the model and to valid
 </div>
 </div>
 <div class="sect3">
-<h4 id="_resolve_the_environment_variables">4.3.3. Resolve the environment variables:</h4>
+<h4 id="_resolve_the_environment_variables">5.3.3. Resolve the environment variables:</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">qnx.buildfile.lang.utils.VariableSubstitutor</span><span class="o">;</span>
@@ -1071,7 +1119,7 @@ When the AST is known, will be easy to access any part of the model and to valid
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-12-28 18:12:39 +0200
+Last updated 2026-01-09 13:14:08 +0200
 </div>
 </div>
 </body>
