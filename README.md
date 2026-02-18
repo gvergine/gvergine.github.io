@@ -1,6 +1,8 @@
-# gvergine.github.io
-gvergine.github.io
+## gvergine.github.io
 
-## qnx-buildfile-lang
+### projects
+* [qnx-buildfile-lang](/qnx-buildfile-lang)
 
-Go to [https://gvergine.github.io/qnx-buildfile-lang](https://gvergine.github.io/qnx-buildfile-lang)
+### articles
+ * [Copying Directories in QNX Buildfiles Considered Harmful](/articles/qnx-directory-deployment-article.md)
+
