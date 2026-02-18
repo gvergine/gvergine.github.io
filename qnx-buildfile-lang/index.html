@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>qnx-buildfile-lang 1.0.8</title>
+<title>qnx-buildfile-lang 1.1.0</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -550,7 +550,7 @@ pre.rouge .gs {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>qnx-buildfile-lang 1.0.8</h1>
+<h1>qnx-buildfile-lang 1.1.0</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -596,10 +596,18 @@ pre.rouge .gs {
 </li>
 <li><a href="#_changelog">6. Changelog</a>
 <ul class="sectlevel2">
-<li><a href="#_1_0_8">6.1. 1.0.8</a>
+<li><a href="#_1_1_0">6.1. 1.1.0</a>
 <ul class="sectlevel3">
-<li><a href="#_custom_validator_jar_support">6.1.1. Custom Validator JAR Support</a></li>
-<li><a href="#_syntax_highlighting_3">6.1.2. Syntax Highlighting</a></li>
+<li><a href="#_content_assist_for_vscode">6.1.1. Content Assist for VSCode</a></li>
+<li><a href="#_outline_symbol_navigation">6.1.2. Outline / Symbol Navigation</a></li>
+<li><a href="#_quick_fixes_for_vscode">6.1.3. Quick Fixes for VSCode</a></li>
+<li><a href="#_standalone_validator_example">6.1.4. Standalone Validator Example</a></li>
+</ul>
+</li>
+<li><a href="#_1_0_8">6.2. 1.0.8</a>
+<ul class="sectlevel3">
+<li><a href="#_custom_validator_jar_support">6.2.1. Custom Validator JAR Support</a></li>
+<li><a href="#_syntax_highlighting_3">6.2.2. Syntax Highlighting</a></li>
 </ul>
 </li>
 </ul>
@@ -614,7 +622,7 @@ pre.rouge .gs {
 <p>Giovanni Vergine, <a href="mailto:verginegiovanni@gmail.com">verginegiovanni@gmail.com</a></p>
 </div>
 <div class="paragraph small">
-<p>Date: Tue Feb 10 18:40:50 EET 2026</p>
+<p>Date: Wed Feb 18 19:18:26 EET 2026</p>
 </div>
 <!-- toc disabled -->
 <div class="admonitionblock tip">
@@ -669,66 +677,52 @@ pre.rouge .gs {
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Syntax validation</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Syntax highlighting</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Content assist / auto-completion</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outline view</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Custom validator JAR</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Variable expansion</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Quick fixes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find references / rename</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AST walk / code generation</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">yes</p></td>
 </tr>
 </tbody>
 </table>
@@ -775,7 +769,7 @@ pre.rouge .gs {
 Look for <code>qnx.buildfile.lang.repository-{Version}.zip</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.repository">Maven Central</a></p>
 </div>
 <div class="paragraph">
-<p>E.g. latest version <code>1.0.8</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.8/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.0.8/</a></p>
+<p>E.g. latest version <code>1.1.0</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.1.0/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.repository/1.1.0/</a></p>
 </div>
 <div class="paragraph">
 <p>Once downloded, follow the usual steps to install it in Eclipse:</p>
@@ -887,7 +881,7 @@ Look for <code>qnx.buildfile.lang.repository-{Version}.zip</code> in <a href="ht
 Look for <code>qnx.buildfile.lang.lsp-{version}.vsix</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.lsp">Maven Central</a></p>
 </div>
 <div class="paragraph">
-<p>E.g. latest version <code>1.0.8</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.0.8/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.0.8/</a></p>
+<p>E.g. latest version <code>1.1.0</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.1.0/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.lsp/1.1.0/</a></p>
 </div>
 <div class="paragraph">
 <p>Once downloded, follow these steps for installing in vscode:</p>
@@ -969,7 +963,7 @@ Look for <code>qnx.buildfile.lang.lsp-{version}.vsix</code> in <a href="https://
 Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="https://central.sonatype.com/artifact/io.github.gvergine/qnx.buildfile.lang.cli">Maven Central</a></p>
 </div>
 <div class="paragraph">
-<p>E.g. latest version <code>1.0.8</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.8/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.0.8/</a></p>
+<p>E.g. latest version <code>1.1.0</code> can be found at <a href="https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.1.0/" class="bare">https://repo1.maven.org/maven2/io/github/gvergine/qnx.buildfile.lang.cli/1.1.0/</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -994,7 +988,7 @@ Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="ht
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell">java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.8-shaded.jar <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...] <span class="o">[</span><span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]]...
+<pre class="rouge highlight"><code data-lang="shell">java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.1.0-shaded.jar <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...] <span class="o">[</span><span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]]...
   <span class="nt">-i</span><span class="o">=</span>&lt;inputs&gt;[,&lt;inputs&gt;...]
          buildfile<span class="o">(</span>s<span class="o">)</span></code></pre>
 </div>
@@ -1004,8 +998,8 @@ Look for <code>qnx.buildfile.lang.cli-{Version}-shaded.jar</code> in <a href="ht
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.8-shaded.jar <span class="nt">-i</span> path/to/first.build <span class="nt">-i</span> path/to/second.build
-QNX Buildfile Validator version 1.0.8
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.1.0-shaded.jar <span class="nt">-i</span> path/to/first.build <span class="nt">-i</span> path/to/second.build
+QNX Buildfile Validator version 1.1.0
 Processing path/to/first.build
 Processing path/to/second.build
 Done - 0 failures
@@ -1018,8 +1012,8 @@ Done - 0 failures
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.8-shaded.jar <span class="nt">-i</span> path/to/error.build
-QNX Buildfile Validator version 1.0.8
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.1.0-shaded.jar <span class="nt">-i</span> path/to/error.build
+QNX Buildfile Validator version 1.1.0
 Processing path/to/error.build
 ERROR at path/to/error.build:11: Attribute name <span class="s2">"gidh"</span> is not known
 Done - 1 failure
@@ -1035,7 +1029,7 @@ Done - 1 failure
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.0.8-shaded.jar <span class="nt">-c</span> path/to/custom-validator.jar <span class="nt">-i</span> path/to/file.build</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java <span class="nt">-jar</span> qnx.buildfile.lang.cli-1.1.0-shaded.jar <span class="nt">-c</span> path/to/custom-validator.jar <span class="nt">-i</span> path/to/file.build</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1077,7 +1071,7 @@ Done - 1 failure
 <pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>io.github.gvergine<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>qnx.buildfile.lang<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;version&gt;</span>1.0.8<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.1.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1278,9 +1272,57 @@ When the AST is known, it will be easy to access any part of the model and to va
 <h2 id="_changelog">6. Changelog</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_1_0_8">6.1. 1.0.8</h3>
+<h3 id="_1_1_0">6.1. 1.1.0</h3>
 <div class="sect3">
-<h4 id="_custom_validator_jar_support">6.1.1. Custom Validator JAR Support</h4>
+<h4 id="_content_assist_for_vscode">6.1.1. Content Assist for VSCode</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VSCode</strong>: content assist now proposes boolean attribute names (after +/-), valued attribute names (with trailing =), and known values for attributes like type, autoso, compress, code, and data.
+Eclipse already had this; VSCode now matches the same proposal set.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_outline_symbol_navigation">6.1.2. Outline / Symbol Navigation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VSCode</strong>: new document outline showing deployment statements and attribute statements as top-level entries, with individual attributes as children.</p>
+</li>
+<li>
+<p><strong>Eclipse</strong>: matching outline tree with custom icons for each node type (attribute statements, deployments, boolean attributes, valued attributes).</p>
+</li>
+<li>
+<p>Both editors support breadcrumb navigation and Go to Symbol.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_quick_fixes_for_vscode">6.1.3. Quick Fixes for VSCode</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VSCode</strong>: quick fixes now suggest closest matching attribute names for typos using Levenshtein distance (e.g. permjs → perms). The first suggestion is marked as preferred for one-click apply.
+Eclipse already had this; the underlying suggestion logic is now shared between both editors.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standalone_validator_example">6.1.4. Standalone Validator Example</h4>
+<div class="paragraph">
+<p>New examples/standalone-validator project demonstrating the full library pipeline: parsing, ${VAR} substitution from environment variables, validation (standard or custom), and directory deployment analysis with file-level replacement suggestions.
+Supports --strict-vars (fail on unresolved variables), -W (fail on warnings), -e KEY=VALUE (extra variables), and -r (report file output).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_0_8">6.2. 1.0.8</h3>
+<div class="sect3">
+<h4 id="_custom_validator_jar_support">6.2.1. Custom Validator JAR Support</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1296,7 +1338,7 @@ When the AST is known, it will be easy to access any part of the model and to va
 </div>
 </div>
 <div class="sect3">
-<h4 id="_syntax_highlighting_3">6.1.2. Syntax Highlighting</h4>
+<h4 id="_syntax_highlighting_3">6.2.2. Syntax Highlighting</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1317,7 +1359,7 @@ When the AST is known, it will be easy to access any part of the model and to va
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-10 18:24:16 +0200
+Last updated 2026-02-18 19:18:23 +0200
 </div>
 </div>
 </body>
