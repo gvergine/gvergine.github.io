@@ -310,12 +310,14 @@ For the directory deployment check specifically, you can load the custom validat
 
 QNX buildfiles define what runs on your target. They define the filesystem layout, the permissions model, the library search paths. In a safety-critical embedded system, the buildfile is as important as the source code.
 
-The directory deployment problem is a symptom of this broader issue. Some teams may directory deployments because they lack the tooling to manage explicit deployments efficiently. A cause of missing an effective validation could be the lack of a validator. Auditing their IFS images may feel today manual and tedious. 
+Yet sometimes buildfiles are treated as second-class citizens. They are not linted. nor validated in CI. They are edited by hand with no content assist.
+
+The directory deployment problem is a symptom of this broader issue. Some teams may use directory deployments because they lack the tooling to manage explicit deployments efficiently. Missing an effective validation is probably due to the lack of a validator. Auditing the IFS images may feel today manual and tedious. 
 
 But with the correct tools, this can be improved.
 
 ---
 
-*Giovanni Vergine is a software engineer working on automotive embedded systems.*
+*Giovanni Vergine is a PM working on automotive embedded systems.*
 
 *[qnx-buildfile-lang](https://github.com/gvergine/qnx-buildfile-lang) is an open-source toolkit for QNX buildfile parsing, validation, and analysis — available as a VS Code extension, Eclipse plugin, CLI tool, and Java library on [Maven Central](https://central.sonatype.com/search?q=qnx.buildfile.lang). It is listed on the [QNX Community Projects](https://gitlab.com/qnx/projects) page.*
