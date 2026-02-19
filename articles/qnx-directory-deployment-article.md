@@ -50,7 +50,7 @@ You don't control what's in that directory. Your build system does. Your colleag
 
 And all of it ends up in your IFS image, on your target, in production.
 
-## The Six Ways This Hurts You
+## Consequences
 
 ### 1. Non-reproducible builds
 
@@ -66,6 +66,14 @@ Directory deployments make it nearly impossible to audit image size. You see a 4
 
 I have personally debugged a situation where an IFS image grew by 12 MB between builds. I found a `.git` directory. Yes, the content supposed to go in that directory was cloned from a git repository, and the whole .git directory was there.
 The buildfile hadn't changed. The source code hadn't changed. But the image was 12 MB larger and boot time increased measurably.
+
+```mermaid
+pie title What's in your IFS image?
+    "Your actual binaries" : 45
+    "Your config files" : 15
+    "Libraries" : 20
+    "Mystery files" : 20
+```
 
 ### 3. Security surface expansion
 
