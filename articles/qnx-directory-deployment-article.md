@@ -306,15 +306,13 @@ The VS Code extension connects via LSP (Language Server Protocol), so the valida
 
 For the directory deployment check specifically, you can load the custom validator JAR via the VS Code settings (`qnx-buildfile-lang.customValidatorJarPath`), and the editor will show the "Copying whole directories from host is considered harmful" warning inline as you edit.
 
-## The Bigger Picture: Buildfiles Deserve the Same Rigor as Source Code
+## Buildfiles Deserve the Same Rigor as Source Code
 
-QNX buildfiles define what runs on your target. They define the filesystem layout, the permissions model, the process startup order, the library search paths. In a safety-critical embedded system, the buildfile is as important as the source code.
+QNX buildfiles define what runs on your target. They define the filesystem layout, the permissions model, the library search paths. In a safety-critical embedded system, the buildfile is as important as the source code.
 
-Yet in most QNX projects, buildfiles are treated as second-class citizens. They are not linted. They are not validated in CI. They are edited by hand with no content assist. They are reviewed casually if at all, because reviewers don't have the tools to understand them quickly.
+The directory deployment problem is a symptom of this broader issue. Some teams may directory deployments because they lack the tooling to manage explicit deployments efficiently. A cause of missing an effective validation could be the lack of a validator. Auditing their IFS images may feel today manual and tedious. 
 
-The directory deployment problem is a symptom of this broader issue. Teams use directory deployments because they lack the tooling to manage explicit deployments efficiently. They don't validate their buildfiles because until recently there was no validator. They don't audit their IFS images because the process is manual and tedious.
-
-The tools exist now. Use them.
+But with the correct tools, this can be improved.
 
 ---
 
